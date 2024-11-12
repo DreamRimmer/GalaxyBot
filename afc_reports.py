@@ -83,7 +83,7 @@ def main():
         "Last 3 months": "3 MONTH",
         "Last 1 year": "1 YEAR"
     }
-    
+
     now = datetime.now(timezone.utc)
     timestamp = now.strftime("%H:%M, %d %B %Y (UTC)")
     bot_username = pywikibot.Site().username()
@@ -91,7 +91,7 @@ def main():
     <div style='font-size:24px'>Top AfC reviewers as of {timestamp}</div>
     Updated by [[User:{bot_username}]] ([[User talk:{bot_username}|talk]]) <onlyinclude>{timestamp}</onlyinclude>
     \n\n"""
-    
+
     for title, interval in intervals.items():
         rows, headers, time_taken = fetch(query(interval))
         content += f"== {title} ==\nQuery runtime: {time_taken:.2f} s\n"
