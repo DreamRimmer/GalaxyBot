@@ -103,7 +103,7 @@ def main():
     page = pywikibot.Page(site, "User:GalaxyBot/Reports/Top AfC reviewers")
 
     page.text += "\n\n" + content
-#    page.save("update AfC reports (bot)", bot=True)
+    page.save("update AfC reports (bot)", bot=True)
 
 if __name__ == "__main__":
     main()
