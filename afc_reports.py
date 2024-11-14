@@ -51,7 +51,7 @@ def format_table(rows, headers):
         table += '|-\n'
         for i, cell in enumerate(row):
             if headers[i] == "Reviewer":
-                link = f"[https://apersonbot.toolforge.org/afchistory/index.html?user={cell} reviews]"
+                link = f"[https://apersonbot.toolforge.org/afchistory/index.html?user={cell.replace(' ', '_')} reviews]"
                 table += f'| [[User:{cell}|{cell}]] ({link})\n'
             else:
                 table += f'| {cell}\n'
